@@ -19,11 +19,11 @@ void clearBuffer()
 }
 
 /*prend un pointeur de string et récupère l'entrée utilisateur et renvoie 1 si réussi 0 sinon*/
-int readStr(char *str, int longueur)
+int readStr(char *str, unsigned long size)
 {
     char *positionEntree = NULL;
     
-    if(fgets(str, longueur, stdin) != NULL)	// fgets renvoie null si il y a une erreur, donc si il n'y a pas d'erreur ...
+    if(fgets(str, size, stdin) != NULL)	// fgets renvoie null si il y a une erreur, donc si il n'y a pas d'erreur ...
     {
         positionEntree = strchr(str, '\n'); //	... strchr fonction qui permet de chercher un caractère dans une chaine
         if(positionEntree != NULL)	// si on a trouver un caractère entrée...
@@ -444,45 +444,45 @@ unsigned long readNumbers(void *tab, Type t, unsigned long limit)
     }
 }
 
-void debugPtr(void* ptr, Type t, unsigned long size){
+void debugList(void* list, Type t, unsigned long size){
     for (unsigned int i = 0; i < size; ++i)
     {
         switch (t){
             case CHAR:
-                printf("%hhd ", *((char*)ptr+i));
+                printf("%hhd ", *((char*)list+i));
                 break;
             case UCHAR:
-                printf("%hhu ", *((unsigned char*)ptr+i));
+                printf("%hhu ", *((unsigned char*)list+i));
                 break;
             case SHRT:
-                printf("%hd ", *((short*)ptr+i));
+                printf("%hd ", *((short*)list+i));
                 break;
             case USHRT:
-                printf("%hu ", *((unsigned short*)(ptr+i)));
+                printf("%hu ", *((unsigned short*)(list+i)));
                 break;
             case INT:
-                printf("%d ", *((int*)ptr+i));
+                printf("%d ", *((int*)list+i));
                 break;
             case UINT:
-                printf("%u ", *((unsigned int*)ptr+i));
+                printf("%u ", *((unsigned int*)list+i));
                 break;
             case LONG:
-                printf("%ld ", *((long*)ptr+i));
+                printf("%ld ", *((long*)list+i));
                 break;
             case ULONG:
-                printf("%lu ", *((unsigned long*)ptr + i));
+                printf("%lu ", *((unsigned long*)list + i));
                 break;
             case LLONG:
-                printf("%lld ", *((long long*)ptr + i));
+                printf("%lld ", *((long long*)list + i));
                 break;
             case ULLONG:
-                printf("%llu ", *((unsigned long long*)ptr + i));
+                printf("%llu ", *((unsigned long long*)list + i));
                 break;
             case FLT:   
-                printf("%.2f ", *((float*)ptr + i));
+                printf("%.2f ", *((float*)list + i));
                 break;
             case DBL:   
-                printf("%.2lf ", *((double*)ptr + i));
+                printf("%.2lf ", *((double*)list + i));
                 break;
             default:
                 printf("Wrong type given\n");

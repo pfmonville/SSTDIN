@@ -17,11 +17,11 @@ typedef enum {
 } Type;
 
 void clearBuffer();
-int readStr(char *saisie, int longueur);
+int readStr(char *input, unsigned long size);
 void readInt(int *nb);
 void readNumber(void *nb, Type t, void* quit);
 unsigned long readNumbers(void* tab, Type t, unsigned long limit);
-void debugPtr(void* ptr, Type t, unsigned long size);
+void debugList(void* list, Type t, unsigned long size);
 
 
 #endif
