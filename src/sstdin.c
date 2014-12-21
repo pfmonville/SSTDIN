@@ -77,7 +77,7 @@ void readInt(int *nb)
 
 
 /*transforme une chaine récupérée en un nombre non signé*/
-void readNumber(void *nb, Type t, char* quit)
+void readNumber(void *nb, Type t, void* quit)
 {
     char *endStr, str[320];
     double l;
@@ -88,7 +88,7 @@ void readNumber(void *nb, Type t, char* quit)
         if (readStr (str, 320))	
         {
             if (quit && tolower(str[0]) == 'q'){ //si l'utilisateur veut arreter une boucle d'entrée de donnée
-                    *quit = 1;
+                    *(char*)quit = 1;
                     return;
             }
             else if (tolower(str[0]) == 'q'){
@@ -104,13 +104,13 @@ void readNumber(void *nb, Type t, char* quit)
                 printf("Wrong entry, please try again\n");}    //on boucle
             else{
                 if (quit)  
-                    *quit = 0;
+                    *(long long*)quit = 0;
                 switch (t){
                     case CHAR:
                         if (l > 127 || l < -128){
                             printf("Wrong entry, please try again\n");}
                         else{
-                            *(char*)nb = (char)l;  
+                            *(long long*)nb = (char)l;  
                             return;
                         }
                         break;

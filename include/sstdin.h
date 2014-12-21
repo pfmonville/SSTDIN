@@ -19,7 +19,7 @@ typedef enum {
 void clearBuffer();
 int readStr(char *saisie, int longueur);
 void readInt(int *nb);
-void readNumber(void *nb, Type t, char* quit);
+void readNumber(void *nb, Type t, void* quit);
 unsigned long readNumbers(void* tab, Type t, unsigned long limit);
 void debugPtr(void* ptr, Type t, unsigned long size);
 
