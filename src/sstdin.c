@@ -88,7 +88,7 @@ void readNumber(void *nb, Type t, void* quit)
         if (readStr (str, 320))	
         {
             if (quit && tolower(str[0]) == 'q'){ //si l'utilisateur veut arreter une boucle d'entrée de donnée
-                    *(char*)quit = 1;
+                    *(long long*)quit = 1;
                     return;
             }
             else if (tolower(str[0]) == 'q'){
@@ -110,7 +110,7 @@ void readNumber(void *nb, Type t, void* quit)
                         if (l > 127 || l < -128){
                             printf("Wrong entry, please try again\n");}
                         else{
-                            *(long long*)nb = (char)l;  
+                            *(char*)nb = (char)l;  
                             return;
                         }
                         break;
