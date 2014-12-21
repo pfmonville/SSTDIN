@@ -24,7 +24,7 @@ plusieurs fonctions sont proposées:
 -void clearBuffer
 --- nettoie le buffer
 
--void readStr(char input, unsigned int size)
+-void readStr(char input, unsigned long size)
 --- récupère une chaine de caractère en nettoyer le buffer automatiquement si besoin
 --- input : la chaine à récupérer
 --- size : la quantité de caractère à lire
