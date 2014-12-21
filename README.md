@@ -9,8 +9,7 @@ la liste des types acceptés est:
 CHAR  : char
 UCHAR : unsigned char
 SHRT  : short
-USHRT : unsigned short
-INT   : int
+USHRT : unsigned shortINT   : int
 UINT  : unsigned int
 LONG  : long
 ULONG : unsigned long
