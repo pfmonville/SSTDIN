@@ -5,20 +5,22 @@ secured standart input
 
 
 bibliothèque permettant de récupérer des entrées utilisateurs de façon sécurisée (pas d'overflow, pas de crash)
-la liste des types acceptés est:
-CHAR  : char
-UCHAR : unsigned char
-SHRT  : short
-USHRT : unsigned shortINT   : int
-UINT  : unsigned int
-LONG  : long
-ULONG : unsigned long
-LLONG : long long
-ULLONG: unsigned long long
-FLT   : float
-DBL   : double
 
-plusieurs fonctions sont proposées:
+## Liste des types acceptés
+
+*  CHAR  : char
+*  UCHAR : unsigned char
+*  SHRT  : short
+*  USHRT : unsigned shortINT   : int
+*  UINT  : unsigned int
+*  LONG  : long
+*  ULONG : unsigned long
+*  LLONG : long long
+*  ULLONG: unsigned long long
+*  FLT   : float
+*  DBL   : double
+
+## liste des fonctions
 
 -void clearBuffer
 --- nettoie le buffer
@@ -53,6 +55,8 @@ plusieurs fonctions sont proposées:
 --- size indique le nombre d'élément de la liste à afficher
 
 exemple d'utilisation pour readNumbers:
+```
 int* list = (int*)malloc(sizeof(int));
 int size;
 size = readNumbers(list, INT, 0);
+```
