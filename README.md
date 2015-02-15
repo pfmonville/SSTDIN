@@ -21,17 +21,21 @@ bibliothèque permettant de récupérer des entrées utilisateurs de façon séc
 *  DBL   : double
 
 ## liste des fonctions
+======
 
 ##### void clearBuffer
 *  nettoie le buffer
+
 
 ##### void readStr(char input, unsigned long size)
 *  récupère une chaine de caractère en nettoyant le buffer automatiquement si besoin
 *  input : la chaine à récupérer
 *  size : la quantité de caractère à lire
 
+
 ##### void readInt(int* number) 
 *  lit un entier passé en paramètre
+
 
 ##### void readNumber(void* number, Type t, void* quit) 
 *  permet de lire un nombre de n'importe quel type et de laisser le choix à l'utilisateur de ne pas rentrer de nombres
@@ -48,11 +52,15 @@ bibliothèque permettant de récupérer des entrées utilisateurs de façon séc
 *  Si 0 alors l'utilisateur est libre de rentrer autant de nombres qu'il souhaite puis de rentrer 'q' ou 'Q' pour quitter.
 *  la taille de la liste de nombre est renvoyée (nécessaire si limit = 0)
 
+
 ##### void debugList(void* list, Type t, unsigned long size)
 *  permet d'afficher en console les éléments de la liste fournie
 *  list est une liste créée avec readNumbers ou tout tableau  de nombre
 *  t est un type de la liste Type
 *  size indique le nombre d'élément de la liste à afficher
+
+
+## Exemple
 
 exemple d'utilisation pour readNumbers:
 ```C
