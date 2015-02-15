@@ -21,7 +21,6 @@ bibliothèque permettant de récupérer des entrées utilisateurs de façon séc
 *  DBL   : double
 
 ## liste des fonctions
-======
 
 ##### void clearBuffer
 *  nettoie le buffer
@@ -43,6 +42,7 @@ bibliothèque permettant de récupérer des entrées utilisateurs de façon séc
 *  t est un type de la liste Type
 *  quit = 1 si l'utilisateur appuie sur 'q' ou 'Q', 0 sinon
 *  On peut mettre NULL dans ce cas l'utilisateur doit obligatoirement rentrer un nombre valide
+
 
 ##### unsigned long readNumbers(void* number, Type t, unsigned long limit)
 *  permet de récupérer un tableau de nombres 
